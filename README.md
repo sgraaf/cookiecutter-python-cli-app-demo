@@ -57,21 +57,6 @@ result = runner.invoke(cli.cli, ["--help"], terminal_width=88)
 help = result.output.replace("Usage: cli", "Usage: cookiecutter-python-cli-app-demo")
 cog.outl(f"\n```sh\ncookiecutter-python-cli-app-demo-with-rich --help\n{help.rstrip()}\n```\n")
 ]]] -->
-
-```sh
-cookiecutter-python-cli-app-demo-with-rich --help
-Usage: cookiecutter-python-cli-app-demo [OPTIONS] COMMAND [ARGS]...
-
-  Demo of https://github.com/sgraaf/cookiecutter-python-cli-app.
-
-Options:
-  --version  Show the version and exit.
-  --help     Show this message and exit.
-
-Commands:
-  repeat  Repeat the input.
-```
-
 <!-- [[[end]]] -->
 
 <!-- end docs-include-usage -->

@@ -18,32 +18,4 @@ for command in cli.cli.commands.keys():
     help = result.output.replace("Usage: cli ", "Usage: cookiecutter-python-cli-app-demo ")
     cog.outl(f"## cookiecutter-python-cli-app-demo {command}\n\n```sh\ncookiecutter-python-cli-app-demo {command} --help\n{help.rstrip()}\n```\n")
 ]]] -->
-
-```sh
-cookiecutter-python-cli-app-demo --help
-Usage: cookiecutter-python-cli-app-demo [OPTIONS] COMMAND [ARGS]...
-
-  Demo of https://github.com/sgraaf/cookiecutter-python-cli-app.
-
-Options:
-  --version  Show the version and exit.
-  --help     Show this message and exit.
-
-Commands:
-  repeat  Repeat the input.
-```
-
-## cookiecutter-python-cli-app-demo repeat
-
-```sh
-cookiecutter-python-cli-app-demo repeat --help
-Usage: cookiecutter-python-cli-app-demo repeat [OPTIONS] INPUT
-
-  Repeat the input.
-
-Options:
-  -r, --reverse  Reverse the input.
-  --help         Show this message and exit.
-```
-
 <!-- [[[end]]] -->
