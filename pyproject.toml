@@ -31,7 +31,7 @@ dynamic = ["version", "description"]
 
 [project.optional-dependencies]
 tests = [
-    "pytest"
+    "pytest",
 ]
 docs = [
     "furo",
