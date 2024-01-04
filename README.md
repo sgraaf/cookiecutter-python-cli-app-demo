@@ -17,23 +17,10 @@ Demo of https://github.com/sgraaf/cookiecutter-python-cli-app.
 
 <!-- start docs-include-installation -->
 
-### From PyPI
-
 Cookiecutter Python CLI App Demo is available on [PyPI](https://pypi.org/project/cookiecutter-python-cli-app-demo/). Install with [pipx](https://pypa.github.io/pipx/) or your package manager of choice:
 
-```bash
+```sh
 pipx install cookiecutter-python-cli-app-demo
-```
-
-### From source
-
-If you'd like, you can also install Cookiecutter Python CLI App Demo from source (with [`flit`](https://flit.readthedocs.io/en/latest/)):
-
-```bash
-git clone https://github.com/sgraaf/cookiecutter-python-cli-app-demo.git
-cd cookiecutter-python-cli-app-demo
-python3 -m pip install flit
-flit install
 ```
 
 <!-- end docs-include-installation -->

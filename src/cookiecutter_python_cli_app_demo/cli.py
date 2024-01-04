@@ -3,9 +3,11 @@ import click
 
 from . import __version__
 
+context_settings = {"help_option_names": ["-h", "--help"]}
 
-@click.group()
-@click.version_option(__version__)
+
+@click.group(context_settings=context_settings)
+@click.version_option(__version__, "-v", "--version")
 def cli() -> None:
     """Demo of https://github.com/sgraaf/cookiecutter-python-cli-app."""
 
