@@ -55,8 +55,8 @@ Changelog = "https://cookiecutter-python-cli-app-demo.readthedocs.io/en/stable/c
 cookiecutter-python-cli-app-demo = "cookiecutter_python_cli_app_demo.cli:cli"
 
 [tool.ruff]
-select = ["ALL"]
-ignore = [
+lint.select = ["ALL"]
+lint.ignore = [
     "E501",  # line too long, handled by black (pycodestyle)
     "ANN002",  # missing-type-args (flake8-annotations)
     "ANN003",  # missing-type-kwargs (flake8-annotations)
@@ -71,7 +71,7 @@ ignore = [
 src = ["src", "tests", "docs"]
 target-version = "py38"  # the minimum Python version supported, used by pyupgrade
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = [
     "F401",  # unused-import (Pyflakes)
 ]
@@ -83,8 +83,11 @@ target-version = "py38"  # the minimum Python version supported, used by pyupgra
     "A001",  # builtin-variable-shadowing (flake8-builtins)
 ]
 "src/cookiecutter_python_cli_app_demo/cli.py" = [
+    "C901",  # complex-structure (mccabe)
+    "FBT001",  # boolean-type-hint-positional-argument (flake8-boolean-trap)
     "A001",  # builtin-variable-shadowing (flake8-builtins)
     "A002",  # builtin-argument-shadowing (flake8-builtins)
+    "PLR0913",  # too-many-arguments (Pylint)
 ]
 "tests/**/test_*.py" = [
     "D",  # pydocstyle
@@ -96,12 +99,12 @@ target-version = "py38"  # the minimum Python version supported, used by pyupgra
 
 
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = [
   "cookiecutter-python-cli-app-demo",
   "tests",
 ]
 lines-between-types = 0
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
