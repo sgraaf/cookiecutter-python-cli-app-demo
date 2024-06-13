@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import cookiecutter_python_cli_app_demo  # noqa: E402
+import cookiecutter_python_cli_app_demo
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information

@@ -2,6 +2,7 @@
 
 This allows cookiecutter-python-cli-app-demo to be executable from a git checkout or zip archive.
 """
+
 from .cli import cli
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 """Main CLI for cookiecutter-python-cli-app-demo."""
+
 import click
 
 from . import __version__

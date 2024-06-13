@@ -35,4 +35,6 @@ def test_version_runner(runner: CliRunner) -> None:
     """Does `--version` display the correct version?"""
     result = runner.invoke(cli, ["--version"])
     assert result.exit_code == 0
-    assert result.output == f"cli, version {version('cookiecutter-python-cli-app-demo')}\n"
+    assert (
+        result.output == f"cli, version {version('cookiecutter-python-cli-app-demo')}\n"
+    )
