@@ -33,7 +33,7 @@ Check out the [Cookiecutter Python CLI App Demo documentation](https://cookiecut
 
 <!-- start docs-include-usage -->
 
-Running `cookiecutter-python-cli-app-demo --help` or `python -m cookiecutter_python_cli_app_demo --help` shows a list of all of the available options and commands:
+Running `cookiecutter-python-cli-app-demo --help` or `python -m cookiecutter_python_cli_app_demo --help` shows a list of all of the available options and arguments:
 
 <!-- [[[cog
 import cog
