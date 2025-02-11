@@ -13,7 +13,7 @@ import cookiecutter_python_cli_app_demo
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Cookiecutter Python CLI App Demo"
-copyright = "2024, Steven van de Graaf"
+copyright = "2025, Steven van de Graaf"
 author = "Steven van de Graaf"
 release = cookiecutter_python_cli_app_demo.__version__
 
