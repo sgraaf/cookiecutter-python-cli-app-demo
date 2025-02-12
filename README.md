@@ -17,10 +17,10 @@ Demo of https://github.com/sgraaf/cookiecutter-python-cli-app.
 
 <!-- start docs-include-installation -->
 
-Cookiecutter Python CLI App Demo is available on [PyPI](https://pypi.org/project/cookiecutter-python-cli-app-demo/). Install with [pipx](https://pypa.github.io/pipx/) or your package manager of choice:
+Cookiecutter Python CLI App Demo is available on [PyPI](https://pypi.org/project/cookiecutter-python-cli-app-demo/). Install with [uv](https://docs.astral.sh/uv/) or your package manager of choice:
 
 ```sh
-pipx install cookiecutter-python-cli-app-demo
+uv tool install cookiecutter-python-cli-app-demo
 ```
 
 <!-- end docs-include-installation -->
