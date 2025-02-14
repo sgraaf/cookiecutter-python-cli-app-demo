@@ -1,9 +1,10 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "cookiecutter-python-cli-app-demo"
+description = "Demo of https://github.com/sgraaf/cookiecutter-python-cli-app."
 authors = [{name = "Steven van de Graaf", email = "steven@vandegraaf.xyz"}]
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -27,7 +28,7 @@ requires-python = "~=3.9"
 dependencies = [
     "click",
 ]
-dynamic = ["version", "description"]
+dynamic = ["version"]
 
 [project.optional-dependencies]
 tests = [
@@ -53,6 +54,9 @@ Changelog = "https://cookiecutter-python-cli-app-demo.readthedocs.io/en/stable/c
 
 [project.scripts]
 cookiecutter-python-cli-app-demo = "cookiecutter_python_cli_app_demo.cli:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "cookiecutter_python_cli_app_demo.__version__"}
 
 [tool.ruff]
 lint.select = ["ALL"]
@@ -94,8 +98,6 @@ target-version = "py39"  # the minimum Python version supported, used by pyupgra
     "SIM300",   # yoda-conditions (flake8-simplify)
     "PLR2004",   # magic-value-comparison (Pylint)
 ]
-
-
 
 [tool.ruff.lint.isort]
 known-first-party = [
