@@ -1,8 +1,8 @@
 """Main CLI for cookiecutter-python-cli-app-demo."""
 
-import click
+from importlib import metadata
 
-from . import __version__
+import click
 
 
 @click.command(
@@ -15,7 +15,7 @@ from . import __version__
     is_flag=True,
     help="Reverse the input.",
 )
-@click.version_option(__version__, "-v", "--version")
+@click.version_option(metadata.version("cookiecutter_python_cli_app_demo"), "-v", "--version")
 def cli(input_: str, *, reverse: bool = False) -> None:
     """Repeat the input.
 

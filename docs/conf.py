@@ -1,13 +1,7 @@
 """Sphinx configuration."""
 
-from __future__ import annotations
-
-import sys
-from pathlib import Path
+from importlib import metadata
 from typing import Any
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import cookiecutter_python_cli_app_demo
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -15,7 +9,8 @@ import cookiecutter_python_cli_app_demo
 project = "Cookiecutter Python CLI App Demo"
 copyright = "2025, Steven van de Graaf"
 author = "Steven van de Graaf"
-release = cookiecutter_python_cli_app_demo.__version__
+release = metadata.version("cookiecutter_python_cli_app_demo")
+version = release.rsplit(".", 1)[0]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

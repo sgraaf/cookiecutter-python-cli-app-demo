@@ -1,9 +1,10 @@
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["uv-build"]
+build-backend = "uv_build"
 
 [project]
 name = "cookiecutter-python-cli-app-demo"
+version = "2025.1.0"
 description = "Demo of https://github.com/sgraaf/cookiecutter-python-cli-app."
 authors = [{name = "Steven van de Graaf", email = "steven@vandegraaf.xyz"}]
 readme = "README.md"
@@ -28,9 +29,8 @@ requires-python = "~=3.9"
 dependencies = [
     "click",
 ]
-dynamic = ["version"]
 
-[project.optional-dependencies]
+[dependency-groups]
 tests = [
     "pytest",
 ]
@@ -38,12 +38,12 @@ docs = [
     "furo",
     "myst-parser",
     "sphinx",
-    "sphinx-autobuild",
     "sphinx-copybutton",
     "sphinxext-opengraph",
 ]
 dev = [
-    "cookiecutter-python-cli-app-demo[tests,docs]",
+    { include-group = "tests" },
+    { include-group = "docs" },
 ]
 
 [project.urls]
@@ -53,10 +53,7 @@ Changelog = "https://cookiecutter-python-cli-app-demo.readthedocs.io/en/stable/c
 "Issue Tracker" = "https://github.com/sgraaf/cookiecutter-python-cli-app-demo/issues"
 
 [project.scripts]
-cookiecutter-python-cli-app-demo = "cookiecutter_python_cli_app_demo.cli:cli"
-
-[tool.setuptools.dynamic]
-version = {attr = "cookiecutter_python_cli_app_demo.__version__"}
+cookiecutter-python-cli-app-demo = "cookiecutter_python_cli_app_demo.__main__:cli"
 
 [tool.ruff]
 lint.select = ["ALL"]
@@ -71,7 +68,6 @@ lint.ignore = [
     "INP",  # flake8-no-pep420
 ]
 src = ["src", "tests", "docs"]
-target-version = "py39"  # the minimum Python version supported, used by pyupgrade
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = [
