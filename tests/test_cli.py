@@ -35,5 +35,6 @@ def test_version_runner(runner: CliRunner) -> None:
     result = runner.invoke(cli, ["--version"])
     assert result.exit_code == 0
     assert (
-        result.output == f"cli, version {metadata.version('cookiecutter-python-cli-app-demo')}\n"
+        result.output
+        == f"cli, version {metadata.version('cookiecutter-python-cli-app-demo')}\n"
     )

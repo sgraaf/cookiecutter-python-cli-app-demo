@@ -15,7 +15,9 @@ import click
     is_flag=True,
     help="Reverse the input.",
 )
-@click.version_option(metadata.version("cookiecutter_python_cli_app_demo"), "-v", "--version")
+@click.version_option(
+    metadata.version("cookiecutter_python_cli_app_demo"), "-v", "--version"
+)
 def cli(input_: str, *, reverse: bool = False) -> None:
     """Repeat the input.
 
