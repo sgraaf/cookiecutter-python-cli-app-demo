@@ -17,14 +17,13 @@ classifiers = [
     "Intended Audience :: Developers",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Typing :: Typed",
 ]
-requires-python = ">=3.10, <4"
+requires-python = ">=3.11, <4"
 dependencies = [
     "click",
 ]
@@ -114,7 +113,7 @@ pydocstyle.convention = "google"
 include = ["src", "tests"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.11"
 files = ["tests"]
 
 [tool.pyrefly]
@@ -123,8 +122,8 @@ search-path = ["tests"]
 
 [tool.pyright]
 include = ["tests"]
-pythonVersion = "3.10"
+pythonVersion = "3.11"
 
 [tool.zuban]
-python_version = "3.10"
+python_version = "3.11"
 files = ["tests"]
