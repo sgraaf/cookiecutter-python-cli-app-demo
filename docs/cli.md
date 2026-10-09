@@ -15,4 +15,19 @@ output = result.output.replace("Usage: cli", "Usage: cookiecutter-python-cli-app
 help_text = "\n".join(line.rstrip() for line in output.splitlines()).rstrip()
 cog.outl(f"\n```shell\ncookiecutter-python-cli-app-demo --help\n{help_text}\n```\n")
 ]]] -->
+
+```shell
+cookiecutter-python-cli-app-demo --help
+Usage: cookiecutter-python-cli-app-demo [OPTIONS] INPUT
+
+  Repeat the input.
+
+  Demo of https://github.com/sgraaf/cookiecutter-python-cli-app.
+
+Options:
+  -r, --reverse  Reverse the input.
+  -v, --version  Show the version and exit.
+  -h, --help     Show this message and exit.
+```
+
 <!-- [[[end]]] -->
